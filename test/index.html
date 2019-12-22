@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Test Angular</title>
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+<style>
+nav{
+    background-color: black;
+}
+nav ul li a{
+    text-decoration: none;
+    color: white;
+font-size: 30px;
+display: block;
+padding: 20px;
+}
+nav ul li{
+    text-decoration: none;
+    display: inline-block;
+
+}
+</style>
+<nav>
+    <ul>
+        <li><a href="#">Test1</a></li>
+        <li><a href="#">Test2</a></li>
+        <li><a href="#">Test3</a></li>
+        <li><a href="#">Test4</a></li>
+        <li><a href="#">Test5</a></li>
+        <li><a href="#">Test6</a></li>
+
+    </ul>
+</nav>
+    
+
+    <script>
+    
+    $(document).ready(function(){
+var page_links = window.location.href.substr(window.location.href.lastIndexOf("/") + 1);
+$("nav ul li a").each(function(){
+if($(this).attr("href")==page_links)
+$(this).css({
+'background-color':'red'
+});
+});
+    });
+    </script>
+</body>
+</html>
